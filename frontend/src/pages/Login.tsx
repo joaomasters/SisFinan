@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 
@@ -12,11 +12,11 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
 
   const onFinish = (values: any) => {
     console.log('Received values:', values);
-    if (values.username === 'admin' && values.password === 'admin') {
+    if (values.email === 'admin' && values.password === 'admin') {
       setIsLoggedIn(true);
-      navigate('/home');
+      navigate('/dashboard');
     } else {
-      alert('Login failed. Please check your username and password.');
+      alert('E-mail ou senha inválidos.');
     }
   };
 
@@ -24,30 +24,24 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
     <div style={{ maxWidth: '300px', margin: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h2>Login</h2>
       <Form
-        name="normal_login"
-        initialValues={{ remember: true }}
+        name="login"
         onFinish={onFinish}
       >
         <Form.Item
-          name="username"
-          rules={[{ required: true, message: 'Please input your Username!' }]}
+          name="email"
+          rules={[{ required: true, message: 'E-mail obrigatório' }]}
         >
-          <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+          <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="E-mail" />
         </Form.Item>
         <Form.Item
           name="password"
-          rules={[{ required: true, message: 'Please input your Password!' }]}
+          rules={[{ required: true, message: 'Senha obrigatória' }]}
         >
           <Input
           prefix={<LockOutlined className="site-form-item-icon" />}
           type="password"
-          placeholder="Password"
+          placeholder="Senha"
         />
-        </Form.Item>
-        <Form.Item>
-          <Form.Item name="remember" valuePropName="checked" noStyle>
-            <Checkbox>Lembrar-me</Checkbox>
-          </Form.Item>
         </Form.Item>
 
         <Form.Item>
