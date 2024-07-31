@@ -13,4 +13,10 @@
       </li>
     </ul>
   </nz-sider>
-  <nz-layout>
+  <nz-layout> <!-- Talvez não seja uma boa pratica, mas foi como consegui encapsular o header, content e footer no sider-->
+    <app-header></app-header>
+      <app-content></app-content>
+      <router-outlet></router-outlet> <!-- O conteúdo da página será injetado aqui com base na rota atual -->
+    <app-footer></app-footer>
+  </nz-layout>
+</nz-layout>

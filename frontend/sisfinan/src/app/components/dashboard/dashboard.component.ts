@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [],
+  imports: [NzDividerModule, NzGridModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
