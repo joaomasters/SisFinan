@@ -2,13 +2,13 @@
   <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0">
     <div class="logo"></div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
-      <li nz-menu-item [routerLink]="'/dashboard'" routerLinkActive="active">
+      <li nz-menu-item [routerLink]="'/dashboard'" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <span>Dashboard</span>
       </li>
-      <li nz-menu-item [routerLink]="'/contas'" routerLinkActive="active">
+      <li nz-menu-item [routerLink]="'/contas'" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <span>Contas</span>
       </li>
-      <li nz-menu-item [routerLink]="'/contas'" routerLinkActive="active">
+      <li nz-menu-item [routerLink]="'/transacoes'" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <span>Transações</span>
       </li>
     </ul>
