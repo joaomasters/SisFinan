@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="logo">
+      <img src="https://static.vecteezy.com/system/resources/previews/009/391/394/large_2x/pack-of-dollars-money-clipart-design-illustration-free-png.png" alt="logotipo" class="image-logo"/>
+    </div>
+    <div class="login-container">
+      <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+        <div class="welcome-text">Bem-vindo!</div>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Insira um e-mail">
+            <input type="text" nz-input formControlName="email" placeholder="E-mail" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Insira uma senha">
+            <input type="password" nz-input formControlName="password" placeholder="Senha" />
+          </nz-form-control>
+        </nz-form-item>
+        <div nz-row class="login-form-margin">
+          <div nz-col [nzSpan]="12">
+            <label nz-checkbox formControlName="remember">
+              <span>Lembrar meus dados</span>
+            </label>
+          </div>
+          <div nz-col [nzSpan]="12">
+            <a class="login-form-forgot">Esqueceu a senha</a>
+          </div>
+        </div>
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
+        Não tem uma conta?
+        <a>Inscreva-se</a>
+      </form>
+    </div>
+  </div>
+  

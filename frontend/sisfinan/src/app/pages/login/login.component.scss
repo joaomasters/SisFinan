@@ -1,0 +1,56 @@
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Ocupa toda a altura da viewport */
+}
+
+.logo {
+  flex: 0 0 60%; /* 60% da largura da tela */
+  background-color: darkblue; /* Adicione uma cor de fundo para visualização */
+  display: flex;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  overflow: hidden; /* Garante que nada saia da div */
+}
+
+.image-logo {
+  width: 100%; /* Faz a imagem ocupar toda a largura da div */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Cobre toda a área da div mantendo a proporção da imagem */
+}
+
+.login-container {
+  flex: 0 0 40%; /* 40% da largura da tela */
+  display: flex;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.login-form {
+  max-width: 300px;
+  width: 100%;
+}
+
+.welcome-text {
+  text-align: center; /* Centraliza o texto dentro da div */
+  margin-bottom: 16px; /* Espaçamento abaixo do texto */
+  font-size: 24px; /* Tamanho da fonte para destaque */
+  color: #333; /* Cor do texto */
+}
+
+.login-form-margin {
+  margin-bottom: 16px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
